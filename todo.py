@@ -4,6 +4,9 @@ def show_tasks():
     print("Tasks:")
     for i, task in enumerate(tasks):
         print(f"{i+1}. {task}")
+def delete_task(index):
+    if 0 <= index < len(tasks):
+        tasks.pop(index)
 
 if __name__ == "__main__":
     tasks.append("Learn Git")
