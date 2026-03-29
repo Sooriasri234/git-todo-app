@@ -4,6 +4,10 @@ def show_tasks():
     print("Tasks:")
     for i, task in enumerate(tasks):
         print(f"{i+1}. {task}")
+def save_tasks():
+    with open("tasks.txt", "w") as f:
+        for task in tasks:
+            f.write(task + "\n")
 def add_task(task):
     tasks.append(task)
 def delete_task(index):
